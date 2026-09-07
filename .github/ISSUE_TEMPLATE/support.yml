@@ -1,0 +1,36 @@
+name: LongScreen 支持请求
+description: 报告功能故障或提出建议；请勿上传录屏、截图或个人信息。
+title: "[支持] "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请勿提交录屏、截图、联系方式或其他个人敏感信息。
+  - type: dropdown
+    id: type
+    attributes:
+      label: 问题类型
+      options:
+        - 无法识别录屏
+        - 拼接结果异常
+        - 保存或分享失败
+        - 功能建议
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: ios-version
+    attributes:
+      label: iOS 版本
+      placeholder: 例如 iOS 26.6
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 请描述操作步骤和页面提示，不要粘贴敏感内容。
+    validations:
+      required: true
